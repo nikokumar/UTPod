@@ -1,4 +1,5 @@
 //
+#include <cstdlib>
 #include <string>
 class Song{
 private:
@@ -37,7 +38,53 @@ public:
             return false;
         }
     }
-    bool operator < (Song const &s1, Song const &s2);
-    bool operator > (Song const &s1, Song const &s2);
+    bool operator < (Song const &s1, Song const &s2){
+        if (s1.getArtist() < s2.getArtist()){
+            return true;
+        }
+        else if (s1.getArtist() == s2.getArtist()){
+            if (s1.getTitle() < s2.getTitle()){
+                return true;
+            }
+            else if (s1.getTitle() == s2.getTitle()){
+                if (s1.getSize() < s2.getSize()){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    bool operator > (Song const &s1, Song const &s2){
+        if (s1.getArtist() > s2.getArtist()){
+            return true;
+        }
+        else if (s1.getArtist() == s2.getArtist()){
+            if (s1.getTitle() > s2.getTitle()){
+                return true;
+            }
+            else if (s1.getTitle() == s2.getTitle()){
+                if (s1.getSize() > s2.getSize()){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
 
 };
