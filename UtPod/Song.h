@@ -1,4 +1,6 @@
 //
+#ifndef SONG_H
+#define SONG_H
 #include <cstdlib>
 #include <string>
 
@@ -14,13 +16,15 @@ public:
     Song(string a, string t, int s);
     //constructor sets variables
     void setTitle(string t);
-    string getTitle();
+    string getTitle() const;
     void setArtist(string a);
-    string getArtist();
+    string getArtist() const;
     void setSize(int s);
-    int getSize();
-    bool operator == (Song const &s1, Song const &s1);
-    bool operator < (Song const &s1, Song const &s1);
-    bool operator > (Song const &s1, Song const &s1);
+    int getSize() const;
+    bool operator== (Song const &s1);
+    bool operator< (Song const &s1);
+    bool operator> (Song const &s1);
 
 };
+
+#endif

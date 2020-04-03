@@ -123,9 +123,7 @@ public:
        output parms -
     */
 
-    int getTotalMemory() {
-        return memSize;
-    }
+  int getTotalMemory();
 
 
 

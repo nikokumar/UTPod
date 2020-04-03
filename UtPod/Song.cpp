@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <string>
 
+#include "Song.h"
+
 using namespace std;
 
 string title; //not const or static?
@@ -19,7 +21,7 @@ void Song::setTitle(string t) {
     title = t;
 }
 
-string Song::getTitle() {
+string Song::getTitle() const {
     return title;
 }
 
@@ -27,7 +29,7 @@ void Song::setArtist(string a) {
     artist = a;
 }
 
-string Song::getArtist() {
+string Song::getArtist() const {
     return artist;
 }
 
@@ -35,28 +37,28 @@ void Song::setSize(int s) {
     size = s;
 }
 
-int Song::getSize() {
+int Song::getSize() const {
     return size;
 }
 
-bool Song::operator==(Song const &s1, Song const &s2) {
-    if (s1.getArtist() == s2.getArtist() &&
-        s1.getTitle() == s2.getTitle() &&
-        s1.getSize() == s2.getSize()) {
+bool Song::operator==(Song const &s2) {
+    if (getArtist() == s2.getArtist() &&
+        getTitle() == s2.getTitle() &&
+        getSize() == s2.getSize()) {
         return true;
     } else {
         return false;
     }
 }
 
-bool Song::operator<(Song const &s1, Song const &s2) {
-    if (s1.getArtist() < s2.getArtist()) {
+bool Song::operator<(Song const &s2) {
+    if (getArtist() < s2.getArtist()) {
         return true;
-    } else if (s1.getArtist() == s2.getArtist()) {
-        if (s1.getTitle() < s2.getTitle()) {
+    } else if (getArtist() == s2.getArtist()) {
+        if (getTitle() < s2.getTitle()) {
             return true;
-        } else if (s1.getTitle() == s2.getTitle()) {
-            if (s1.getSize() < s2.getSize()) {
+        } else if (getTitle() == s2.getTitle()) {
+            if (getSize() < s2.getSize()) {
                 return true;
             } else {
                 return false;
@@ -69,14 +71,14 @@ bool Song::operator<(Song const &s1, Song const &s2) {
     }
 }
 
-bool Song::operator>(Song const &s1, Song const &s2) {
-    if (s1.getArtist() > s2.getArtist()) {
+bool Song::operator>(Song const &s2) {
+    if (getArtist() > s2.getArtist()) {
         return true;
-    } else if (s1.getArtist() == s2.getArtist()) {
-        if (s1.getTitle() > s2.getTitle()) {
+    } else if (getArtist() == s2.getArtist()) {
+        if (getTitle() > s2.getTitle()) {
             return true;
-        } else if (s1.getTitle() == s2.getTitle()) {
-            if (s1.getSize() > s2.getSize()) {
+        } else if (getTitle() == s2.getTitle()) {
+            if (getSize() > s2.getSize()) {
                 return true;
             } else {
                 return false;

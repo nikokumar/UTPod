@@ -45,7 +45,6 @@ UtPod::UtPod(int size) {
 */
 
 int UtPod::addSong(Song const &s) {
-
 }
 
 
@@ -62,7 +61,6 @@ int UtPod::addSong(Song const &s) {
 */
 
 int UtPod::removeSong(Song const &s) {
-
 }
 
 
@@ -76,7 +74,6 @@ int UtPod::removeSong(Song const &s) {
 */
 
 void UtPod::shuffle() {
-
 }
 
 
