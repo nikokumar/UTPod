@@ -94,7 +94,7 @@ void UtPod::showSongList() {
         a=sNode->s.getArtist();
         t=sNode->s.getTitle();
         n=sNode->s.getSize();
-        cout << t << ", " << a << ", " << s << endl;
+        cout << t << ", " << a << ", " << n << endl;
         sNode=sNode->next;
     }
 }
