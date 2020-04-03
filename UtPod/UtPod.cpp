@@ -55,10 +55,85 @@ int UtPod::removeSong(Song const &s) {
   currentSongNode->next = currentSongNode->next->next;
   return 0;
 
+
+/* FUNCTION - void showSongList
+ * prints the current list of songs in order from first to last to standard output
+ * format - Title, Artist, size in MB (one song per line)
+
+   input parms -
+
+   output parms -
+*/
+
+void UtPod::showSongList() {
+    struct SongNode *sNode = songs;
+    string a,t;
+    int n;
+    while(sNode->next != nullptr){
+        a=sNode->s.getArtist();
+        t=sNode->s.getTitle();
+        n=sNode->s.getSize();
+        cout << t << ", " << a << ", " << s << endl;
+        sNode=sNode->next;
+    }
 }
 
-void shuffle() {
 
-  
+/* FUNCTION - void sortSongList
+ *  sorts the songs in ascending order
+    o will do nothing if there are less than two songs in the current list
+
+   input parms -
+
+   output parms -
+*/
+
+void UtPod::sortSongList() {
 
 }
+
+
+/* FUNCTION - void clearMemory
+ * clears all the songs from memory
+
+   input parms -
+
+   output parms -
+*/
+void UtPod::clearMemory() {
+
+}
+
+
+/* FUNCTION - int getTotalMemory
+ *  returns the total amount of memory in the UtPod
+    o will do nothing if there are less than two songs in the current list
+
+   input parms -
+
+   output parms -
+*/
+
+int UtPod::getTotalMemory() {
+    return memSize;
+}
+
+
+/* FUNCTION - int getRemainingMemory
+ *  returns the amount of memory available for adding new songs
+
+   input parms -
+
+   output parms -
+*/
+
+int UtPod::getRemainingMemory() {
+
+}
+
+//destructor
+UtPod::~UtPod() {
+
+}
+
+

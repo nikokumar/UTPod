@@ -94,6 +94,9 @@ int main(int argc, char *argv[])
     
     t.showSongList();
     cout << "memory = " << t.getRemainingMemory() << endl;
+
+    t.clearMemory();
+    t.showSongList();
     
 
 }
