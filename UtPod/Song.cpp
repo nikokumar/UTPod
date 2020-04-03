@@ -1,6 +1,9 @@
 //
 #include <cstdlib>
 #include <string>
+
+using namespace std;
+
 class Song{
 private:
     string title; //not const or static?
