@@ -1,12 +1,9 @@
 /* utPod_driver.cpp
-Demo Driver for the UtPod.
 
-Roger Priebe
+Nikolai Kumar
 EE 312 10/16/18
 
-This is a basic driver for the UtPod.
 
-You will want to do more complete testing.
 
 */
 #include <cstdlib>

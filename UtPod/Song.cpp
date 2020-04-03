@@ -8,7 +8,7 @@ private:
     int size;
 
 public:
-    Song(string title, string artist, int size);
+    Song(string artist, string title, int size);
     //constructor sets variables
     void setTitle(string t){
         title = t;
